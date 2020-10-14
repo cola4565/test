@@ -11,7 +11,7 @@ public class UserInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         User user=(User) request.getSession().getAttribute("user");
         if (null==user){
-            response.sendRedirect(request.getContextPath() + "/error");
+            response.sendRedirect(request.getContextPath() + "/errors");
             return false;
         }
         return true;
