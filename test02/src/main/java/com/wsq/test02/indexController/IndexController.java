@@ -47,7 +47,7 @@ public class IndexController {
         User user= (User) request.getSession().getAttribute("user");
         request.getSession().removeAttribute("user");
         user.setPassword(password);
-        return service.update(user)?"更改密码成功!":"更改密码失败!";
+        return service.update(user)?"更改密码成功!!!!!":"更改密码失败!";
 
     }
     @RequestMapping(value = "/errors")
